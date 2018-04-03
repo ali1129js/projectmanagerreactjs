@@ -2,7 +2,7 @@
  * @Author: Ali Ismail
  * @Date:   2018-04-02T13:27:28+02:00
  * @Last modified by:   Ali Ismail
- * @Last modified time: 2018-04-03T17:35:12+02:00
+ * @Last modified time: 2018-04-03T17:52:47+02:00
  */
  import React, { Component } from 'react';
  import ProjectItem from './ProjectItem';
@@ -16,7 +16,7 @@
        projectItems = this.props.projects.map(project => {
          return (
            <ProjectItem
-             key={project.title}
+             key={project.id}
              project={project}
              onDelete={this.deleteProject.bind(this)}
            />
