@@ -2,7 +2,7 @@
  * @Author: Ali Ismail
  * @Date:   2018-04-02T08:51:13+02:00
  * @Last modified by:   Ali Ismail
- * @Last modified time: 2018-04-03T14:20:27+02:00
+ * @Last modified time: 2018-04-03T17:11:55+02:00
  */
 import React, { Component } from 'react';
 import './App.css';
@@ -16,26 +16,22 @@ class App extends Component {
     this.state = {
       projects: []
     }
+    this.addProject = this.addProject.bind(this);
   }
   componentWillMount(){
     this.setState({
-                projects:[
-                {
-                title: 'eat meat',
-                category: 'Health and Fitness',
-                color: 'blue'
-                  },
-                {
-                title: 'read Medium',
-                category: 'Coding skills',
-                color: 'red'
-                  }
-  ]});
+                projects:[]});
+  }
+  addProject(project){
+    console.log(project);
+    let projects = this.state.projects;
+    projects.push(project);
+    this.setState({projects:projects});
   }
   render() {
     return (
       <div className="App">
-        <AddProject />
+        <AddProject addProject={this.addProject}/>
         <Projects projects={this.state.projects}/>
       </div>
     );

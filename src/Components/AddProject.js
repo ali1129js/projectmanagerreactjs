@@ -2,7 +2,7 @@
  * @Author: Ali Ismail
  * @Date:   2018-04-03T14:14:34+02:00
  * @Last modified by:   Ali Ismail
- * @Last modified time: 2018-04-03T15:30:04+02:00
+ * @Last modified time: 2018-04-03T17:02:59+02:00
  */
 import React, { Component } from 'react';
 class AddProject extends Component {
@@ -17,19 +17,22 @@ class AddProject extends Component {
   static defaultProps = {
     categories: ['Health and Fitness','Coding Skills','Knowledge Consumption','Entertainment']
   }
-  //setState takes a second parameter, a callback function! sending data up wink.
   handleSubmit(e){
     e.preventDefault();
-    if(this.refs.title.value === ''){
+    if (this.refs.title.value === ''){
     alert('Title is missing');
     } else {
     this.setState({newProject:
       {
+        id:Date.now(),
         title:this.refs.title.value,
-        category: this.refs.category.value
+        category: this.refs.category.value,
+        color: '#'+Math.floor(Math.random()*16777215).toString(16)
       }
+      //setState takes a second parameter, a callback function! sending data up wink.
     },function () {
       console.log(this.state);
+      this.props.addProject(this.state.newProject);
     });
   }
   }
