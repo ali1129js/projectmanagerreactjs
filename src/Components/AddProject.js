@@ -2,7 +2,7 @@
  * @Author: Ali Ismail
  * @Date:   2018-04-03T14:14:34+02:00
  * @Last modified by:   Ali Ismail
- * @Last modified time: 2018-04-03T17:02:59+02:00
+ * @Last modified time: 2018-04-03T17:22:40+02:00
  */
 import React, { Component } from 'react';
 class AddProject extends Component {
@@ -53,6 +53,7 @@ class AddProject extends Component {
             {categoryOptions}
           </select>
           </div>
+          <br />
           <input type="submit" value="Submit" />
         </form>
       </div>
