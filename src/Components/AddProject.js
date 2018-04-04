@@ -3,9 +3,9 @@
  * @Date:   2018-04-03T14:14:34+02:00
  * @Last modified by:   Ali Ismail
 <<<<<<< HEAD
- * @Last modified time: 2018-04-03T18:10:32+02:00
+ * @Last modified time: 2018-04-04T22:12:45+02:00
 =======
- * @Last modified time: 2018-04-04T21:15:57+02:00
+ * @Last modified time: 2018-04-04T22:12:45+02:00
 >>>>>>> master
  */
 import React, { Component } from 'react';
@@ -45,15 +45,19 @@ class AddProject extends Component {
       return <option key={category} value={category}>{category}</option>
     });
     return(
-      <div className="AddProject">
+      <div className="form-group">
         <form onSubmit={this.handleSubmit}>
           <div>
             <label> Title</label><br />
-            <input className="form-control" id="task" type="text" ref="title" />
+            <input
+              className="form-control"
+              placeholder="Enter a Task"
+              type="text"
+            ref="title" />
           </div>
           <div>
             <label> Category</label><br />
-            <select className="form-control" id="sel1" ref="category">
+            <select className="form-control form-control-lg" ref="category">
               {categoryOptions}
             </select>
           </div>
