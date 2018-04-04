@@ -3,9 +3,9 @@
  * @Date:   2018-04-03T14:14:34+02:00
  * @Last modified by:   Ali Ismail
 <<<<<<< HEAD
- * @Last modified time: 2018-04-04T22:12:45+02:00
+ * @Last modified time: 2018-04-04T22:24:33+02:00
 =======
- * @Last modified time: 2018-04-04T22:12:45+02:00
+ * @Last modified time: 2018-04-04T22:24:33+02:00
 >>>>>>> master
  */
 import React, { Component } from 'react';
@@ -62,7 +62,7 @@ class AddProject extends Component {
             </select>
           </div>
           <br />
-          <button type="submit" className="btn btn-primary" value="Submit">Add a Task</button>
+          <button type="submit" className="btn btn-primary">Add a Task</button>
         </form>
       </div>
     );
