@@ -2,18 +2,36 @@
  * @Author: Ali Ismail
  * @Date:   2018-04-03T16:55:09+02:00
  * @Last modified by:   Ali Ismail
+<<<<<<< HEAD
+ * @Last modified time: 2018-04-03T18:50:04+02:00
+=======
  * @Last modified time: 2018-04-04T17:10:14+02:00
+>>>>>>> master
  */
 
 
 
 .App {
   text-align: center;
+  background-color: blue;
 }
 .AddProject {
   font-size: 22px;
 }
+<<<<<<< HEAD
+input{
+  height: 25px;
+  width:300px;
 
+}
+select{
+  display: block;
+  margin:30px;
+  
+}
+=======
+
+>>>>>>> master
 .App-title {
   font-size: 1.5em;
 }

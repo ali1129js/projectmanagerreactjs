@@ -2,7 +2,11 @@
  * @Author: Ali Ismail
  * @Date:   2018-04-03T14:14:34+02:00
  * @Last modified by:   Ali Ismail
+<<<<<<< HEAD
+ * @Last modified time: 2018-04-03T18:10:32+02:00
+=======
  * @Last modified time: 2018-04-04T21:15:57+02:00
+>>>>>>> master
  */
 import React, { Component } from 'react';
 class AddProject extends Component {
@@ -41,7 +45,7 @@ class AddProject extends Component {
       return <option key={category} value={category}>{category}</option>
     });
     return(
-      <div>
+      <div className="AddProject">
         <form onSubmit={this.handleSubmit}>
           <div>
             <label> Title</label><br />
