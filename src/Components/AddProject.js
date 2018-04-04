@@ -2,7 +2,11 @@
  * @Author: Ali Ismail
  * @Date:   2018-04-03T14:14:34+02:00
  * @Last modified by:   Ali Ismail
+<<<<<<< HEAD
  * @Last modified time: 2018-04-03T18:10:32+02:00
+=======
+ * @Last modified time: 2018-04-04T21:15:57+02:00
+>>>>>>> master
  */
 import React, { Component } from 'react';
 class AddProject extends Component {
@@ -45,16 +49,16 @@ class AddProject extends Component {
         <form onSubmit={this.handleSubmit}>
           <div>
             <label> Title</label><br />
-            <input type="text" ref="title" />
+            <input className="form-control" id="task" type="text" ref="title" />
           </div>
           <div>
             <label> Category</label><br />
-            <select ref="category">
-            {categoryOptions}
-          </select>
+            <select className="form-control" id="sel1" ref="category">
+              {categoryOptions}
+            </select>
           </div>
           <br />
-          <input type="submit" value="Submit" />
+          <button type="submit" className="btn btn-primary" value="Submit">Add a Task</button>
         </form>
       </div>
     );
