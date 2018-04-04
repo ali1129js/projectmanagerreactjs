@@ -2,7 +2,7 @@
  * @Author: Ali Ismail
  * @Date:   2018-04-03T16:55:09+02:00
  * @Last modified by:   Ali Ismail
- * @Last modified time: 2018-04-03T16:55:09+02:00
+ * @Last modified time: 2018-04-04T17:10:14+02:00
  */
 
 
@@ -10,14 +10,10 @@
 .App {
   text-align: center;
 }
-
-
-
+.AddProject {
+  font-size: 22px;
+}
 
 .App-title {
   font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
 }
