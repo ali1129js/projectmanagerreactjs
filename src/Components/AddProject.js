@@ -2,25 +2,23 @@
  * @Author: Ali Ismail
  * @Date:   2018-04-03T14:14:34+02:00
  * @Last modified by:   Ali Ismail
-<<<<<<< HEAD
- * @Last modified time: 2018-04-04T22:24:33+02:00
-=======
- * @Last modified time: 2018-04-04T22:24:33+02:00
->>>>>>> master
+
  */
 import React, { Component } from 'react';
 class AddProject extends Component {
   constructor(){
     super();
     this.state = {
-      newProject: {}
+      newProject: {
+        }
     }
     this.handleSubmit = this.handleSubmit.bind(this);
-
+    
   }
   static defaultProps = {
-    categories: ['Health and Fitness','Coding Skills','Knowledge Consumption','Entertainment']
+        categories: ['Health and Fitness','Coding Skills','Knowledge Consumption','Entertainment']
   }
+
   handleSubmit(e){
     e.preventDefault();
     if (this.refs.title.value === ''){
@@ -35,11 +33,12 @@ class AddProject extends Component {
       }
       //setState takes a second parameter, a callback function! sending data up wink.
     },function () {
-      console.log(this.state);
       this.props.addProject(this.state.newProject);
     });
   }
+  this.refs.title.value = '';
   }
+
   render(){
     let categoryOptions = this.props.categories.map(category => {
       return <option key={category} value={category}>{category}</option>
@@ -53,7 +52,8 @@ class AddProject extends Component {
               className="form-control"
               placeholder="Enter a Task"
               type="text"
-            ref="title" />
+              ref="title"
+            />
           </div>
           <div>
             <label> Category</label><br />
@@ -62,7 +62,9 @@ class AddProject extends Component {
             </select>
           </div>
           <br />
-          <button type="submit" className="btn btn-primary">Add a Task</button>
+          <button
+            type="submit"
+            className="btn btn-primary">Add a Task</button>
         </form>
       </div>
     );
