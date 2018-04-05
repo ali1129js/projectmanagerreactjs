@@ -2,7 +2,7 @@
  * @Author: Ali Ismail
  * @Date:   2018-04-03T13:39:59+02:00
  * @Last modified by:   Ali Ismail
- * @Last modified time: 2018-04-05T13:42:31+02:00
+ * @Last modified time: 2018-04-05T14:21:04+02:00
  */
 import React, { Component } from 'react';
 class ProjectItem extends Component {
@@ -16,7 +16,7 @@ class ProjectItem extends Component {
         <li className="list-group-item" style={{
           width: 'auto',
           margin: '5px auto',
-          border: `2px solid ${color}`,
+          border: `3px solid ${color}`,
         }}>
           {this.props.project.title} - {this.props.project.category}
 
