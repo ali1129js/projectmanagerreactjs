@@ -1,7 +1,7 @@
 /**
  * @Author: Ali Ismail
  * @Date:   2018-04-03T14:14:34+02:00
- * @Last modified by:   Ali Ismail
+ * @Last modified by:   Ali
 
  */
 import React, { Component } from 'react';
@@ -13,7 +13,7 @@ class AddProject extends Component {
         }
     }
     this.handleSubmit = this.handleSubmit.bind(this);
-    
+
   }
   static defaultProps = {
         categories: ['Health and Fitness','Coding Skills','Knowledge Consumption','Entertainment']
@@ -32,7 +32,7 @@ class AddProject extends Component {
         color: '#'+Math.floor(Math.random()*16777215).toString(16)
       }
       //setState takes a second parameter, a callback function! sending data up wink.
-    },function () {
+    }, () => {
       this.props.addProject(this.state.newProject);
     });
   }
@@ -64,7 +64,7 @@ class AddProject extends Component {
           <br />
           <button
             type="submit"
-            className="btn btn-primary">Add a Task</button>
+            className="btn btn-danger">Add a Task</button>
         </form>
       </div>
     );
